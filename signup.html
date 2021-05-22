@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Sign up</title>
+    <link rel="stylesheet" href="CSS/structure.css">
+    <script>
+      /* ------------------------------------ Click on login and Sign Up to  changue and view the effect
+      ---------------------------------------
+      */
+      
+      function cambiar_login() {
+        document.querySelector('.cont_forms').className = "cont_forms cont_forms_active_login";  
+      document.querySelector('.cont_form_login').style.display = "block";
+      document.querySelector('.cont_form_sign_up').style.opacity = "0";               
+      
+      setTimeout(function(){  document.querySelector('.cont_form_login').style.opacity = "1"; },400);  
+        
+      setTimeout(function(){    
+      document.querySelector('.cont_form_sign_up').style.display = "none";
+      },200);  
+        }
+      
+      function cambiar_sign_up(at) {
+        document.querySelector('.cont_forms').className = "cont_forms cont_forms_active_sign_up";
+        document.querySelector('.cont_form_sign_up').style.display = "block";
+      document.querySelector('.cont_form_login').style.opacity = "0";
+        
+      setTimeout(function(){  document.querySelector('.cont_form_sign_up').style.opacity = "1";
+      },100);  
+      
+      setTimeout(function(){   document.querySelector('.cont_form_login').style.display = "none";
+      },400);  
+      
+      
+      }    
+      
+      
+      
+      function ocultar_login_sign_up() {
+      
+      document.querySelector('.cont_forms').className = "cont_forms";  
+      document.querySelector('.cont_form_sign_up').style.opacity = "0";               
+      document.querySelector('.cont_form_login').style.opacity = "0"; 
+      
+      setTimeout(function(){
+      document.querySelector('.cont_form_sign_up').style.display = "none";
+      document.querySelector('.cont_form_login').style.display = "none";
+      },500);  
+        
+        }
+      </script>
+
+</head>
+<body>
+<!--navbar-->
+    <ul>
+        <li><a href="index.html">POCETNA</a></li>
+        <li><a href="">FORUM</a></li>
+        <li class="dropdown">
+                <a href="" class="dropbtn">SREDNJE SKOLE</a>
+                <div class="dropdown-content">
+                  <a href="ss.html">Sarajevo</a>
+                  <a href="#">Link 2</a>
+                </div></li>
+        <li class="dropdown">
+            <a href="" class="dropbtn">FAKULTETI</a>
+            <div class="dropdown-content">
+              <a href="sf.html">Link 1</a>
+              <a href="#">Link 2</a>
+            </div></li>
+            <li>    <span class="topnav">
+              <span class="search-container">
+      <input type="text" placeholder="Search..." name="search"></span>    
+              </span></li>
+              <a href="signup.html"><img style="width:3%;margin-top:5px;float:right;margin-right: 1%;" src="IMG/icon.png" alt="sl"></a>
+    </ul>
+
+
+<!--log in and sign up-->
+    <div class="cotn_principal">
+        <div class="cont_centrar">
+        
+          <div class="cont_login">
+        <div class="cont_info_log_sign_up">
+              <div class="col_md_login">
+        <div class="cont_ba_opcitiy">
+                
+                <h2>LOGIN</h2>  
+          <p></p> 
+          <button class="btn_login" onclick="cambiar_login()">LOGIN</button>
+          </div>
+          </div>
+        <div class="col_md_sign_up">
+        <div class="cont_ba_opcitiy">
+          <h2>SIGN UP</h2>
+        
+          
+          <p></p>
+        
+          <button class="btn_sign_up" onclick="cambiar_sign_up()">SIGN UP</button>
+        </div>
+          
+          </div>
+               </div>
+        
+            
+            <div class="cont_back_info">
+               <div class="cont_img_back_grey">
+               <img src="IMG/sarajevobg.jpg" alt="" />
+               </div>
+               
+            </div>
+        <div class="cont_forms" >
+            <div class="cont_img_back_">
+               <img src="IMG/sarajevobg.jpg" alt="" />
+               </div>
+         <div class="cont_form_login">
+        <a href="#" onclick="ocultar_login_sign_up()" ><i class="material-icons">&#xE5C4;</i></a>
+           <h2>LOGIN</h2>
+         <input type="text" placeholder="Email" />
+        <input type="password" placeholder="Password" />
+        <button class="btn_login" onclick="cambiar_login()">LOGIN</button>
+          </div>
+          
+           <div class="cont_form_sign_up">
+        <a href="#" onclick="ocultar_login_sign_up()"><i class="material-icons">&#xE5C4;</i></a>
+             <h2>SIGN UP</h2>
+        <input type="text" placeholder="Email" />
+        <input type="text" placeholder="User" />
+        <input type="password" placeholder="Password" />
+        <input type="password" placeholder="Confirm Password" />
+        <button class="btn_sign_up" onclick="cambiar_sign_up()">SIGN UP</button>
+        
+          </div>
+        
+            </div>
+            
+          </div>
+         </div>
+        </div>
+
+</body>
+</html>
